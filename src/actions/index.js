@@ -11,3 +11,9 @@ export const descreasement = (parameter) => {
         payload: parameter
     }
 }
+
+export const toggleLogIn = () => {
+    return {
+        type: 'TOGGLE_LOGIN'
+    }
+}

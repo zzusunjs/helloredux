@@ -1,7 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { increasement, descreasement } from './actions';
-
-
+import { increasement, descreasement, toggleLogIn } from './actions';
 
 function App() {
 
@@ -20,6 +18,10 @@ function App() {
       <button onClick={() => { dispatch(descreasement(2)) }}
       >
         DECREASEMENT
+      </button>
+      <br/>
+      <button onClick={()=>{dispatch(toggleLogIn())}}>
+        toggleLogIn
       </button>
       <br />
       {isLoggedIn ? <p> message only open to logged in user</p> : ''}
